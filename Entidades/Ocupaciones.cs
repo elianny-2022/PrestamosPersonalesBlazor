@@ -1,0 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
+public class Ocupaciones 
+{
+    [Key]
+    public int OcupacionId { get; set; }
+    [Required(ErrorMessage = "Por favor introducir la descripcion")]
+    public  String? Descripcion { get; set; }
+    [Range(1, 1_000_000)]
+    public double Salario { get; set; }
+}
